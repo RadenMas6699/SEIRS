@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/hidroponikFragment"
+        android:icon="@drawable/ic_home_outline"
+        android:title="@string/hidroponik" />
+    <item
+        android:id="@+id/listrikFragment"
+        android:icon="@drawable/ic_electrical_outline"
+        android:title="@string/listrik" />
+    <item
+        android:id="@+id/controlFragment"
+        android:icon="@drawable/ic_control_outline"
+        android:title="@string/control" />
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_setting_outline"
+        android:title="@string/setting" />
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom"
+    app:startDestination="@id/hidroponikFragment">
+
+    <fragment
+        android:id="@+id/hidroponikFragment"
+        android:name="com.radenmas.seirs.ui.main.HidroponikFragment"
+        android:label="@string/hidroponik"
+        tools:layout="@layout/fragment_hidroponik" />
+    <fragment
+        android:id="@+id/listrikFragment"
+        android:name="com.radenmas.seirs.ui.main.ListrikFragment"
+        android:label="@string/listrik"
+        tools:layout="@layout/fragment_hidroponik" />
+    <fragment
+        android:id="@+id/controlFragment"
+        android:name="com.radenmas.seirs.ui.main.ControlFragment"
+        android:label="fragment_control"
+        tools:layout="@layout/fragment_control" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.radenmas.seirs.ui.main.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

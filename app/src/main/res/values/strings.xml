@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SEIRS</string>
+    <string name="app_name_full">SMART ECO-IRRIGATION SYSTEM</string>
+    <string name="app_version">Versi %1$s</string>
+    <string name="greeting">Selamat %1$s</string>
+    <string name="monitoring_hidroponik">Monitoring Hidroponik</string>
+    <string name="hidroponik">Hidroponik</string>
+    <string name="monitoring_listrik">Monitoring Listrik</string>
+    <string name="listrik">Listrik</string>
+    <string name="control">Kontrol</string>
+    <string name="setting">Pengaturan</string>
+    <string name="last_update">Terakhir update</string>
+    <string name="active">Aktifkan</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Hapus</string>
+    <string name="ph_water">pH Air</string>
+    <string name="ppm">PPM</string>
+    <string name="temp_water">Suhu Air</string>
+    <string name="level_water">Level Air</string>
+    <string name="temp_greenhouse">Suhu Green\nHouse</string>
+    <string name="hum_greenhouse">Kelembapan\nGreen House</string>
+    <string name="temp_panel">Suhu Panel</string>
+    <string name="hum_panel">Kelembapan\nPanel</string>
+    <string name="pump_irrigation">Pompa Irigasi</string>
+    <string name="pump_ph">Pompa pH</string>
+    <string name="pump_nutrisi">Pompa Nutrisi</string>
+    <string name="pump_mix">Pompa Pengaduk</string>
+    <string name="status">Status %1$s</string>
+    <string name="choose_image">Pilih Foto</string>
+
+</resources>

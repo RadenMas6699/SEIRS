@@ -84,16 +84,18 @@
                     android:id="@+id/imageFormula"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:scaleType="centerCrop"
-                    android:background="@color/white_smoke" />
+                    android:layout_alignParentStart="true"
+                    android:background="@color/white_smoke"
+                    android:scaleType="centerCrop" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnChooseImage"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="52dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@id/imgFormula"
+                    android:layout_toEndOf="@id/imageFormula"
                     android:backgroundTint="@color/white"
                     android:text="@string/choose_image"
                     android:textAllCaps="false"
@@ -111,7 +113,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_toEndOf="@id/imgFormula"
+                    android:layout_toEndOf="@id/imageFormula"
                     android:backgroundTint="@color/green"
                     android:text="Tambah"
                     android:textAllCaps="false"

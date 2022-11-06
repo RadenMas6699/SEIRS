@@ -12,7 +12,7 @@ package com.radenmas.seirs.model
 class Formula {
     lateinit var id: String
     lateinit var name: String
-    lateinit var image: String
+//    lateinit var image: String
     var ph: Float? = null
     var ppm: Int? = null
 
@@ -21,13 +21,13 @@ class Formula {
     constructor(
         id: String,
         name: String,
-        image: String,
+//        image: String,
         ph: Float,
         ppm: Int,
     ) {
         this.id = id
         this.name = name
-        this.image = image
+//        this.image = image
         this.ph = ph
         this.ppm = ppm
     }

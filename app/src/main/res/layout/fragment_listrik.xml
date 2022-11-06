@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:clipChildren="false"
@@ -170,16 +170,17 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgVoltAc"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
@@ -220,9 +221,10 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgArusAc"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -240,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:clipChildren="false"
@@ -279,16 +281,17 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgDayaAc"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
@@ -317,9 +320,9 @@
                             android:id="@+id/imgEnergiAc"
                             android:layout_width="42dp"
                             android:layout_height="42dp"
-                            android:padding="3dp"
                             android:layout_below="@id/titleEnergiAc"
                             android:layout_marginTop="18dp"
+                            android:padding="3dp"
                             android:src="@drawable/ic_lighting" />
 
                         <TextView
@@ -331,9 +334,10 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgEnergiAc"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -350,7 +354,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:clipChildren="false"
@@ -390,16 +394,17 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgFrequensiAc"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
@@ -440,9 +445,10 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgPFactor"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -459,7 +465,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:clipChildren="false"
@@ -485,10 +491,10 @@
                         <ImageView
                             android:id="@+id/imgVoltBattery"
                             android:layout_width="42dp"
-                            android:padding="3dp"
                             android:layout_height="42dp"
                             android:layout_below="@id/titleVoltBattery"
                             android:layout_marginTop="18dp"
+                            android:padding="3dp"
                             android:src="@drawable/ic_battery" />
 
                         <TextView
@@ -500,16 +506,17 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgVoltBattery"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
@@ -551,9 +558,10 @@
                             android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/imgVoltPanel"
                             android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
+                            android:singleLine="true"
                             android:textColor="@color/primary_text"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>

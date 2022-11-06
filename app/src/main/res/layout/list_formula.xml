@@ -15,16 +15,15 @@
         android:background="@drawable/bg_inactive"
         android:padding="16dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgFormula"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginEnd="16dp" />
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgFormula"-->
+<!--            android:layout_width="72dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:layout_marginEnd="16dp" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/imgFormula"
             android:gravity="center_vertical">
 
             <TextView
@@ -48,7 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:layout_toEndOf="@id/imgFormula"
             android:orientation="horizontal">
 
             <RelativeLayout

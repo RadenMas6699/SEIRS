@@ -14,15 +14,20 @@
         android:id="@+id/listrikFragment"
         android:name="com.radenmas.seirs.ui.main.ListrikFragment"
         android:label="@string/listrik"
-        tools:layout="@layout/fragment_hidroponik" />
+        tools:layout="@layout/fragment_listrik" />
     <fragment
         android:id="@+id/controlFragment"
         android:name="com.radenmas.seirs.ui.main.ControlFragment"
-        android:label="fragment_control"
+        android:label="@string/control"
         tools:layout="@layout/fragment_control" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.radenmas.seirs.ui.main.ChartFragment"
+        android:label="@string/chart"
+        tools:layout="@layout/fragment_chart" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.radenmas.seirs.ui.main.SettingFragment"
-        android:label="fragment_setting"
+        android:label="@string/setting"
         tools:layout="@layout/fragment_setting" />
 </navigation>

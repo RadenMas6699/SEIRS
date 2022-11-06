@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_smoke"
+    android:orientation="vertical"
+    tools:context=".ui.main.ChartFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/chart"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/temp_water"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartTempWater"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/ph_water"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartPhWater"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/ppm"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartPpmWater"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -13,13 +13,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.FirebaseStorage
 import com.radenmas.seirs.R
 import com.radenmas.seirs.adapter.FirebaseViewHolder
 import com.radenmas.seirs.databinding.BottomCreateFormulaBinding
@@ -67,12 +65,12 @@ class SettingFragment : Fragment() {
             bs.imgDismiss.setOnClickListener {
                 dialog.dismiss()
             }
-            bs.btnChooseImage.setOnClickListener {
-                val intent = Intent()
-                intent.type = "image/*"
-                intent.action = Intent.ACTION_GET_CONTENT
-                startActivityForResult(Intent.createChooser(intent, "Pilih Gambar"), 71)
-            }
+//            bs.btnChooseImage.setOnClickListener {
+//                val intent = Intent()
+//                intent.type = "image/*"
+//                intent.action = Intent.ACTION_GET_CONTENT
+//                startActivityForResult(Intent.createChooser(intent, "Pilih Gambar"), 71)
+//            }
 
             bs.btnAddFormula.setOnClickListener {
                 val name = bs.etNameFormula.text.trim().toString()
@@ -80,34 +78,41 @@ class SettingFragment : Fragment() {
                 val ppm = bs.etValPpm.text.toString().toInt()
                 val id = reffFormula.push().key.toString()
 
-                if (filePath != null) {
-                    Utils.showLoading(requireContext())
-                    val storageReference =
-                        FirebaseStorage.getInstance().getReference("formula").child(id)
-                    val ref = storageReference.child(id)
-                    ref.putFile(filePath!!)
-                        .addOnSuccessListener {
-                            Utils.dismissLoading()
-                            ref.downloadUrl
-                                .addOnSuccessListener { uri: Uri ->
+//                if (filePath != null) {
+                Utils.showLoading(requireContext())
+//                    val storageReference =
+//                        FirebaseStorage.getInstance().getReference("formula").child(id)
+//                    val ref = storageReference.child(id)
+//                    ref.putFile(filePath!!)
+//                        .addOnSuccessListener {
+//                            Utils.dismissLoading()
+//                            ref.downloadUrl
+//                                .addOnSuccessListener { uri: Uri ->
+                val formula = Formula(id, name, ph, ppm)
+                reffFormula.child(id).setValue(formula).addOnSuccessListener {
+                    bs.etNameFormula.text.clear()
+                    bs.etValPh.text.clear()
+                    bs.etValPpm.text.clear()
 
-                                    val formula = Formula(id, name, uri.toString(), ph, ppm)
-                                    reffFormula.child(id).setValue(formula).addOnSuccessListener {
-                                        bs.etNameFormula.text.clear()
-                                        bs.etValPh.text.clear()
-                                        bs.etValPpm.text.clear()
-                                        dialog.dismiss()
-                                    }
-                                    Utils.toast(
-                                        requireContext(),
-                                        "Formula baru berhasil ditambahkan"
-                                    )
-                                }
-                        }
-                } else {
+                    dialog.dismiss()
+
                     Utils.dismissLoading()
-                    Utils.toast(requireContext(), "Pilih gambar  terlebih dahulu")
+
+                    Utils.toast(
+                        requireContext(),
+                        "Formula baru berhasil ditambahkan"
+                    )
                 }
+
+//                                }
+//                        }.addOnFailureListener {
+//                            Utils.toast(requireContext(), it.message.toString())
+//                        }
+//                }
+//            else {
+//                    Utils.dismissLoading()
+//                    Utils.toast(requireContext(), "Pilih gambar  terlebih dahulu")
+//                }
             }
         }
     }
@@ -116,7 +121,7 @@ class SettingFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 71 && resultCode == RESULT_OK && data != null && data.data != null) {
             filePath = data.data
-            bs.imageFormula.setImageURI(filePath)
+//            bs.imageFormula.setImageURI(filePath)
         }
     }
 
@@ -139,7 +144,7 @@ class SettingFragment : Fragment() {
                 i: Int,
                 formula: Formula
             ) {
-                holder.imgFormula?.let { Glide.with(requireContext()).load(formula.image).into(it) }
+//                holder.imgFormula?.let { Glide.with(requireContext()).load(formula.image).into(it) }
                 holder.tvNameFormula!!.text = formula.name
                 holder.tvValuePh!!.text = Utils.formatComma2(formula.ph!!)
                 holder.tvValuePpm!!.text = formula.ppm.toString()
@@ -149,7 +154,7 @@ class SettingFragment : Fragment() {
                     popupMenu.setOnMenuItemClickListener { menuItem: MenuItem ->
                         when (menuItem.itemId) {
                             R.id.active -> {
-                                setActive(formula.name, formula.image, formula.ph, formula.ppm)
+                                setActive(formula.id, formula.name, formula.ph!!, formula.ppm!!)
                                 return@setOnMenuItemClickListener true
                             }
 
@@ -199,12 +204,16 @@ class SettingFragment : Fragment() {
             }
             .setNegativeButton(
                 "Tidak"
-            ) { dialog: DialogInterface?, which: Int -> }
+            ) { dialog: DialogInterface?, _: Int -> dialog!!.dismiss() }
             .show()
     }
 
-    private fun setActive(name: String, image: String, ph: Float?, ppm: Int?) {
-
+    private fun setActive(id: String, name: String, ph: Float, ppm: Int) {
+        val update: MutableMap<String, Any> = HashMap()
+        update["idCal"] = id
+        update["phCal"] = ph
+        update["ppmCal"] = ppm
+        FirebaseDatabase.getInstance().reference.child("nutrisi").updateChildren(update)
     }
 
     override fun onStart() {

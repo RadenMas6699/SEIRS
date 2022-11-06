@@ -12,8 +12,12 @@
         android:id="@+id/controlFragment"
         android:icon="@drawable/ic_control_outline"
         android:title="@string/control" />
-<!--    <item-->
-<!--        android:id="@+id/settingFragment"-->
-<!--        android:icon="@drawable/ic_setting_outline"-->
-<!--        android:title="@string/setting" />-->
+    <item
+        android:id="@+id/chartFragment"
+        android:icon="@drawable/ic_chart_outline"
+        android:title="@string/chart" />
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_setting_outline"
+        android:title="@string/setting" />
 </menu>

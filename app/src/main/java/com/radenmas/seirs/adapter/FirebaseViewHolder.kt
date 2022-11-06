@@ -15,7 +15,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 class FirebaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     // List Formula
-    var imgFormula: CircleImageView? = null
+//    var imgFormula: CircleImageView? = null
     var tvNameFormula: TextView? = null
     var imgMore: ImageView? = null
     var tvValuePh: TextView? = null
@@ -23,7 +23,7 @@ class FirebaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     init {
         // List Formula
-        imgFormula = itemView.findViewById(R.id.imgFormula)
+//        imgFormula = itemView.findViewById(R.id.imgFormula)
         tvNameFormula = itemView.findViewById(R.id.tvNameFormula)
         imgMore = itemView.findViewById(R.id.imgMore)
         tvValuePh = itemView.findViewById(R.id.tvValuePh)
